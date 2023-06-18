@@ -16,7 +16,7 @@ class _StateFulWidgetState extends State<WhyProvider> {
   void initState() {
     super.initState();
     Timer.periodic(const Duration(seconds: 2), (timer) {
-      print(count++);
+      // print(count++);
       setState(() {
       });
      });

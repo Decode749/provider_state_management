@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:provider_state_management/why_provider.dart';
+import 'package:provider/provider.dart';
+// import 'package:provider_state_management/why_provider.dart';
+
+import 'provider/count_provider.dart';
+import 'screen/count_example.dart';
 // import 'stateful_widget_screen.dart';
 
 // import 'home_screen.dart';
@@ -14,13 +18,16 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+    return ChangeNotifierProvider(
+      create: (_) => CountProvider(),
+      child: MaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
+        ),
+        home: const CountExample(),
       ),
-      home: const WhyProvider(),
     );
   }
 }
