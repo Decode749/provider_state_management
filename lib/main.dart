@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'stateful_widget_screen.dart';
+import 'package:provider_state_management/why_provider.dart';
+// import 'stateful_widget_screen.dart';
 
 // import 'home_screen.dart';
 
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const StateFulWidget(),
+      home: const WhyProvider(),
     );
   }
 }
